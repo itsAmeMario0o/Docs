@@ -1,0 +1,1312 @@
+{
+  "id": "584197cef5af8829c2c67fc6",
+  "version": 1,
+  "policies": [
+    {
+      "src": "584197cef5af8829c2c67fca",
+      "dst": "584197cef5af8829c2c67fcc",
+      "src_name": "DomainControllers",
+      "dst_name": "WebServers",
+      "whitelist": [
+        {
+          "port": [
+            52829,
+            52829
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcc",
+      "dst": "584197cef5af8829c2c67fc7",
+      "src_name": "WebServers",
+      "dst_name": "Database Servers",
+      "whitelist": [
+        {
+          "port": [
+            1433,
+            1433
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fca",
+      "dst": "584197cef5af8829c2c67fcd",
+      "src_name": "DomainControllers",
+      "dst_name": "WorkStations",
+      "whitelist": [
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fc7",
+      "dst": "584197cef5af8829c2c67fcc",
+      "src_name": "Database Servers",
+      "dst_name": "WebServers",
+      "whitelist": [
+        {
+          "port": [
+            49396,
+            49396
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            53768,
+            53768
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            58350,
+            58350
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            60428,
+            60428
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcd",
+      "dst": "584197cef5af8829c2c67fcb",
+      "src_name": "WorkStations",
+      "dst_name": "External",
+      "whitelist": [
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            443,
+            443
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            5640,
+            5640
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcd",
+      "dst": "584197cef5af8829c2c67fcd",
+      "src_name": "WorkStations",
+      "dst_name": "WorkStations",
+      "whitelist": [
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcc",
+      "dst": "584197cef5af8829c2c67fcb",
+      "src_name": "WebServers",
+      "dst_name": "External",
+      "whitelist": [
+        {
+          "port": [
+            443,
+            443
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            5640,
+            5640
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcd",
+      "dst": "584197cef5af8829c2c67fcc",
+      "src_name": "WorkStations",
+      "dst_name": "WebServers",
+      "whitelist": [
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcb",
+      "dst": "584197cef5af8829c2c67fcd",
+      "src_name": "External",
+      "dst_name": "WorkStations",
+      "whitelist": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            1538,
+            1539
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcb",
+      "dst": "584197cef5af8829c2c67fcc",
+      "src_name": "External",
+      "dst_name": "WebServers",
+      "whitelist": [
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49154,
+            49154
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            61637,
+            61637
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            65049,
+            65049
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcb",
+      "dst": "584197cef5af8829c2c67fca",
+      "src_name": "External",
+      "dst_name": "DomainControllers",
+      "whitelist": [
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            138,
+            138
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            3268,
+            3268
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49154,
+            49155
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49158,
+            49158
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49213,
+            49213
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49217,
+            49217
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcb",
+      "dst": "584197cef5af8829c2c67fc7",
+      "src_name": "External",
+      "dst_name": "Database Servers",
+      "whitelist": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            1433,
+            1433
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49154,
+            49154
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            51886,
+            51887
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            64253,
+            64253
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcc",
+      "dst": "584197cef5af8829c2c67fca",
+      "src_name": "WebServers",
+      "dst_name": "DomainControllers",
+      "whitelist": [
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49155,
+            49155
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49158,
+            49158
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fc7",
+      "dst": "584197cef5af8829c2c67fcb",
+      "src_name": "Database Servers",
+      "dst_name": "External",
+      "whitelist": [
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            443,
+            443
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            5640,
+            5640
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            52494,
+            52494
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            55802,
+            55802
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            59981,
+            59981
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            64414,
+            64414
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fc7",
+      "dst": "584197cef5af8829c2c67fca",
+      "src_name": "Database Servers",
+      "dst_name": "DomainControllers",
+      "whitelist": [
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49155,
+            49155
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fca",
+      "dst": "584197cef5af8829c2c67fca",
+      "src_name": "DomainControllers",
+      "dst_name": "DomainControllers",
+      "whitelist": [
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49158,
+            49158
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49240,
+            49240
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            61414,
+            61414
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fcd",
+      "dst": "584197cef5af8829c2c67fca",
+      "src_name": "WorkStations",
+      "dst_name": "DomainControllers",
+      "whitelist": [
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49155,
+            49155
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            49158,
+            49158
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            138,
+            138
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        }
+      ]
+    },
+    {
+      "src": "584197cef5af8829c2c67fca",
+      "dst": "584197cef5af8829c2c67fcb",
+      "src_name": "DomainControllers",
+      "dst_name": "External",
+      "whitelist": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            443,
+            443
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            5640,
+            5640
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            55891,
+            55891
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            59793,
+            59793
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            60043,
+            60043
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            60123,
+            60123
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            63940,
+            63940
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            64967,
+            64967
+          ],
+          "proto": 6,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17,
+          "action": "ALLOW"
+        }
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "name": "Database Servers",
+      "id": "584197cef5af8829c2c67fc7",
+      "approved": true,
+      "external": false,
+      "route_tag": {
+        "subnet_mask": "0.0.0.0/0",
+        "name": "N/A"
+      },
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.21",
+          "name": "SQL01"
+        },
+        {
+          "ip": "7.0.0.22",
+          "name": "SQL02"
+        }
+      ]
+    },
+    {
+      "name": "DomainControllers",
+      "id": "584197cef5af8829c2c67fca",
+      "approved": true,
+      "external": false,
+      "route_tag": {
+        "subnet_mask": "0.0.0.0/0",
+        "name": "N/A"
+      },
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.11",
+          "name": "dc01"
+        },
+        {
+          "ip": "7.0.0.12",
+          "name": "dc02"
+        }
+      ]
+    },
+    {
+      "name": "External",
+      "id": "584197cef5af8829c2c67fcb",
+      "approved": true,
+      "external": false,
+      "route_tag": {
+        "subnet_mask": "0.0.0.0/0",
+        "name": "N/A"
+      },
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "0.0.0.0",
+          "name": "0.0.0.0/0",
+          "prefix_len": 0
+        }
+      ]
+    },
+    {
+      "name": "WebServers",
+      "id": "584197cef5af8829c2c67fcc",
+      "approved": true,
+      "external": false,
+      "route_tag": {
+        "subnet_mask": "0.0.0.0/0",
+        "name": "N/A"
+      },
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.41",
+          "name": "web01"
+        },
+        {
+          "ip": "7.0.0.51",
+          "name": "web01"
+        },
+        {
+          "ip": "7.0.0.42",
+          "name": "Web02"
+        },
+        {
+          "ip": "7.0.0.50",
+          "name": "Web02"
+        },
+        {
+          "ip": "7.0.0.52",
+          "name": "Web02"
+        }
+      ]
+    },
+    {
+      "name": "WorkStations",
+      "id": "584197cef5af8829c2c67fcd",
+      "approved": true,
+      "external": false,
+      "route_tag": {
+        "subnet_mask": "0.0.0.0/0",
+        "name": "N/A"
+      },
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.91",
+          "name": "WKS01"
+        },
+        {
+          "ip": "7.0.0.92",
+          "name": "wks02"
+        }
+      ]
+    }
+  ],
+  "vrf": {
+    "id": 1,
+    "name": "Default",
+    "tenant_id": 0,
+    "tenant_name": "Default"
+  },
+  "name": "Mario ADM Sample",
+  "applications": [
+    {
+      "id": "586ff885a056281450c42b59",
+      "name": "SSRS",
+      "clusters": [
+        "584197cef5af8829c2c67fc7",
+        "584197cef5af8829c2c67fca",
+        "584197cef5af8829c2c67fcb",
+        "584197cef5af8829c2c67fcc",
+        "584197cef5af8829c2c67fcd"
+      ]
+    }
+  ]
+}
