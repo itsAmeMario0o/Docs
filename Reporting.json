@@ -1,0 +1,1050 @@
+{
+  "id": "597623b5755f0275db52302d",
+  "name": "Reporting",
+  "app_scope_id": "5976226f755f020551523026",
+  "description": "MSLab's Reporting Implementation",
+  "author": "Frank Cicalese",
+  "primary": true,
+  "created_at": 1500914613,
+  "version": 11,
+  "absolute_policies": [
+
+  ],
+  "default_policies": [
+    {
+      "consumer_filter_id": "59919572755f027fe73d9acf",
+      "provider_filter_id": "5977355b497d4f5fd01cba3e",
+      "consumer_filter_name": "Reporting-DatabaseTier",
+      "provider_filter_name": "Tetrationmicrosoft:TetrationCollectors",
+      "l4_params": [
+        {
+          "port": [
+            443,
+            443
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5640,
+            5640
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5660,
+            5660
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5978ffd8755f023a0a523027",
+      "provider_filter_id": "59919572755f027fe73d9acc",
+      "consumer_filter_name": "Tetrationmicrosoft:MSLab-AppDevServers",
+      "provider_filter_name": "Reporting-Web/AppTier",
+      "l4_params": [
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5972405e755f023d7652305a",
+      "provider_filter_id": "59919572755f027fe73d9acc",
+      "consumer_filter_name": "Tetrationmicrosoft",
+      "provider_filter_name": "Reporting-Web/AppTier",
+      "l4_params": [
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49000,
+            65535
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            40000,
+            49399
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5972405e755f023d7652305a",
+      "provider_filter_id": "59919572755f027fe73d9acf",
+      "consumer_filter_name": "Tetrationmicrosoft",
+      "provider_filter_name": "Reporting-DatabaseTier",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49530,
+            65535
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            50000,
+            65535
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            50000,
+            65535
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5977355b497d4f5fd01cba3e",
+      "provider_filter_id": "59919572755f027fe73d9acf",
+      "consumer_filter_name": "Tetrationmicrosoft:TetrationCollectors",
+      "provider_filter_name": "Reporting-DatabaseTier",
+      "l4_params": [
+        {
+          "port": [
+            58360,
+            61000
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            61286,
+            61286
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59762249497d4f3d121cb9bb",
+      "provider_filter_id": "59919572755f027fe73d9acc",
+      "consumer_filter_name": "Tetrationmicrosoft:MSLab-DCs",
+      "provider_filter_name": "Reporting-Web/AppTier",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            49160,
+            65535
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5977355b497d4f5fd01cba3e",
+      "provider_filter_id": "59919572755f027fe73d9acc",
+      "consumer_filter_name": "Tetrationmicrosoft:TetrationCollectors",
+      "provider_filter_name": "Reporting-Web/AppTier",
+      "l4_params": [
+        {
+          "port": [
+            49160,
+            65535
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59919572755f027fe73d9acc",
+      "provider_filter_id": "5977355b497d4f5fd01cba3e",
+      "consumer_filter_name": "Reporting-Web/AppTier",
+      "provider_filter_name": "Tetrationmicrosoft:TetrationCollectors",
+      "l4_params": [
+        {
+          "port": [
+            443,
+            443
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5640,
+            5640
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5660,
+            5660
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59919572755f027fe73d9acf",
+      "provider_filter_id": "5972405e755f023d7652305a",
+      "consumer_filter_name": "Reporting-DatabaseTier",
+      "provider_filter_name": "Tetrationmicrosoft",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 2
+        },
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            3702,
+            3702
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            2986,
+            2986
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            29491,
+            29491
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59919572755f027fe73d9acf",
+      "provider_filter_id": "59762249497d4f3d121cb9bb",
+      "consumer_filter_name": "Reporting-DatabaseTier",
+      "provider_filter_name": "Tetrationmicrosoft:MSLab-DCs",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49155,
+            49155
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49158,
+            49159
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59919572755f027fe73d9acc",
+      "provider_filter_id": "59919572755f027fe73d9acf",
+      "consumer_filter_name": "Reporting-Web/AppTier",
+      "provider_filter_name": "Reporting-DatabaseTier",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            1433,
+            1433
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59790016497d4f76f81cba9b",
+      "provider_filter_id": "59919572755f027fe73d9acc",
+      "consumer_filter_name": "Tetrationmicrosoft:MSLab-DeveloperWorkstations",
+      "provider_filter_name": "Reporting-Web/AppTier",
+      "l4_params": [
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59919572755f027fe73d9acc",
+      "provider_filter_id": "5972405e755f023d7652305a",
+      "consumer_filter_name": "Reporting-Web/AppTier",
+      "provider_filter_name": "Tetrationmicrosoft",
+      "l4_params": [
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            3702,
+            3702
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49798,
+            49798
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 2
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59790016497d4f76f81cba9b",
+      "provider_filter_id": "59919572755f027fe73d9acf",
+      "consumer_filter_name": "Tetrationmicrosoft:MSLab-DeveloperWorkstations",
+      "provider_filter_name": "Reporting-DatabaseTier",
+      "l4_params": [
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            138,
+            138
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49530,
+            65535
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59919572755f027fe73d9acf",
+      "provider_filter_id": "59919572755f027fe73d9acc",
+      "consumer_filter_name": "Reporting-DatabaseTier",
+      "provider_filter_name": "Reporting-Web/AppTier",
+      "l4_params": [
+        {
+          "port": [
+            49160,
+            65535
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59919572755f027fe73d9acc",
+      "provider_filter_id": "59762249497d4f3d121cb9bb",
+      "consumer_filter_name": "Reporting-Web/AppTier",
+      "provider_filter_name": "Tetrationmicrosoft:MSLab-DCs",
+      "l4_params": [
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49155,
+            49155
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49158,
+            49158
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59919572755f027fe73d9acf",
+      "provider_filter_id": "59790016497d4f76f81cba9b",
+      "consumer_filter_name": "Reporting-DatabaseTier",
+      "provider_filter_name": "Tetrationmicrosoft:MSLab-DeveloperWorkstations",
+      "l4_params": [
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5357,
+            5357
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "599195ad755f0204f16a5dc4",
+      "provider_filter_id": "5976226f755f020551523026",
+      "consumer_filter_name": "ApplicationDevelopmentServers",
+      "provider_filter_name": "Tetrationmicrosoft:MSLab-Reporting",
+      "l4_params": [
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "599195e9497d4f5439355944",
+      "provider_filter_id": "5976226f755f020551523026",
+      "consumer_filter_name": "Developer Workstations",
+      "provider_filter_name": "Tetrationmicrosoft:MSLab-Reporting",
+      "l4_params": [
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    }
+  ],
+  "catch_all_action": "DENY",
+  "clusters": [
+    {
+      "name": "ApplicationDevelopmentServers",
+      "description": "Windows Server 2012 R2 developer servers.",
+      "id": "599195ad755f0204f16a5dc4",
+      "approved": true,
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.31",
+          "name": "App01"
+        },
+        {
+          "ip": "7.0.0.32",
+          "name": "App02"
+        }
+      ],
+      "external": true,
+      "parent_application": {
+        "id": "59790079497d4f55e21cbcc4",
+        "name": "AppDev Servers"
+      }
+    },
+    {
+      "name": "Developer Workstations",
+      "description": "Windows 10E developer workstations.",
+      "id": "599195e9497d4f5439355944",
+      "approved": true,
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.91",
+          "name": "7.0.0.91"
+        },
+        {
+          "ip": "7.0.0.92",
+          "name": "7.0.0.92"
+        }
+      ],
+      "external": true,
+      "parent_application": {
+        "id": "597900b2497d4f76f81cba9c",
+        "name": "Developer Workstations"
+      }
+    },
+    {
+      "name": "Reporting-DatabaseTier",
+      "description": "Database servers supporting MSLab's reporting solution.",
+      "id": "59919572755f027fe73d9acf",
+      "approved": true,
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.21",
+          "name": "SQL01"
+        }
+      ],
+      "external": false
+    },
+    {
+      "name": "Reporting-Web/AppTier",
+      "description": "Web/App servers hosting MSLab's reporting solution.",
+      "id": "59919572755f027fe73d9acc",
+      "approved": true,
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.41",
+          "name": "web01"
+        },
+        {
+          "ip": "7.0.0.51",
+          "name": "web01"
+        },
+        {
+          "ip": "7.0.0.50",
+          "name": "web01"
+        },
+        {
+          "ip": "7.0.0.52",
+          "name": "Web02"
+        },
+        {
+          "ip": "7.0.0.42",
+          "name": "Web02"
+        }
+      ],
+      "external": false
+    }
+  ],
+  "inventory_filters": [
+    {
+      "id": "5972405e755f023d7652305a",
+      "name": "Tetrationmicrosoft",
+      "query": {
+        "type": "eq",
+        "field": "vrf_id",
+        "value": 2
+      }
+    },
+    {
+      "id": "5978ffd8755f023a0a523027",
+      "name": "Tetrationmicrosoft:MSLab-AppDevServers",
+      "query": {
+        "type": "and",
+        "filters": [
+          {
+            "field": "vrf_id",
+            "type": "eq",
+            "value": 2
+          },
+          {
+            "type": "and",
+            "filters": [
+              {
+                "field": "user_pod",
+                "type": "contains",
+                "value": "Microsoft"
+              },
+              {
+                "field": "user_classification",
+                "type": "contains",
+                "value": "App/Dev"
+              }
+            ]
+          }
+        ]
+      },
+      "parent_app_scope": {
+        "id": "5972405e755f023d7652305a",
+        "name": "Tetrationmicrosoft"
+      }
+    },
+    {
+      "id": "59762249497d4f3d121cb9bb",
+      "name": "Tetrationmicrosoft:MSLab-DCs",
+      "query": {
+        "type": "and",
+        "filters": [
+          {
+            "field": "vrf_id",
+            "type": "eq",
+            "value": 2
+          },
+          {
+            "type": "and",
+            "filters": [
+              {
+                "field": "user_pod",
+                "type": "contains",
+                "value": "Microsoft"
+              },
+              {
+                "field": "user_classification",
+                "type": "contains",
+                "value": "Domain Controller"
+              }
+            ]
+          }
+        ]
+      },
+      "parent_app_scope": {
+        "id": "5972405e755f023d7652305a",
+        "name": "Tetrationmicrosoft"
+      }
+    },
+    {
+      "id": "59790016497d4f76f81cba9b",
+      "name": "Tetrationmicrosoft:MSLab-DeveloperWorkstations",
+      "query": {
+        "type": "and",
+        "filters": [
+          {
+            "field": "vrf_id",
+            "type": "eq",
+            "value": 2
+          },
+          {
+            "type": "and",
+            "filters": [
+              {
+                "field": "user_pod",
+                "type": "contains",
+                "value": "Microsoft"
+              },
+              {
+                "field": "user_classification",
+                "type": "contains",
+                "value": "Work"
+              }
+            ]
+          }
+        ]
+      },
+      "parent_app_scope": {
+        "id": "5972405e755f023d7652305a",
+        "name": "Tetrationmicrosoft"
+      }
+    },
+    {
+      "id": "5976226f755f020551523026",
+      "name": "Tetrationmicrosoft:MSLab-Reporting",
+      "query": {
+        "type": "and",
+        "filters": [
+          {
+            "field": "vrf_id",
+            "type": "eq",
+            "value": 2
+          },
+          {
+            "type": "and",
+            "filters": [
+              {
+                "field": "user_pod",
+                "type": "contains",
+                "value": "Microsoft"
+              },
+              {
+                "field": "user_classification",
+                "type": "contains",
+                "value": "Reporting"
+              }
+            ]
+          }
+        ]
+      },
+      "parent_app_scope": {
+        "id": "5972405e755f023d7652305a",
+        "name": "Tetrationmicrosoft"
+      }
+    },
+    {
+      "id": "5977355b497d4f5fd01cba3e",
+      "name": "Tetrationmicrosoft:TetrationCollectors",
+      "query": {
+        "type": "and",
+        "filters": [
+          {
+            "field": "vrf_id",
+            "type": "eq",
+            "value": 2
+          },
+          {
+            "field": "ip",
+            "type": "subnet",
+            "value": "172.26.46.0/24"
+          }
+        ]
+      },
+      "parent_app_scope": {
+        "id": "5972405e755f023d7652305a",
+        "name": "Tetrationmicrosoft"
+      }
+    }
+  ],
+  "vrf": {
+    "id": 2,
+    "name": "Tetration:microsoft",
+    "tenant_id": 0,
+    "tenant_name": "Default"
+  }
+}
